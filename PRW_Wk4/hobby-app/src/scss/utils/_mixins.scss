@@ -1,0 +1,37 @@
+@mixin mq($size) {
+    
+    @if $size == small {
+        @media (max-width: 599px) { @content; }
+    }
+    @else if $size == medium {
+        @media (max-width: 1199px) { @content; }
+    }
+    @else if $size == large {
+        @media (min-width: 1200px) { @content; }
+    }
+}
+
+@mixin heading($size) {
+    font-family: $heading-font;
+    font-weight: bold;
+    color: $cOne;
+    
+    @if $size == $h1-size {
+        font-size: $h1-size;
+    }
+    @else if $size == $h2-size {
+        font-size: $h2-size;
+    }
+    @else if $size == $h3-size {
+        font-size: $h3-size;
+    }
+    @else if $size == $h4-size {
+        font-size: $h4-size;
+    }
+    @else if $size == $h5-size {
+        font-size: $h5-size;
+    }
+    @else if $size == $h6-size {
+        font-size: $h6-size;
+    }
+}

@@ -1,0 +1,87 @@
+//----------Base Styles----------//
+
+html {
+    font-size: 62.5%;
+    font-family: $body-font;
+    color: $font-color;
+    min-height: 100%;
+    background: #000 url("./images/background.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.3);
+    min-height: 100vh;
+}
+
+h1 {
+    @include heading ($h1-size);
+    
+    @include mq(medium) {
+        font-size: $h2-size;
+    }
+    
+    @include mq(small) {
+        font-size: $h3-size;
+    }
+}
+
+h2 {
+    @include heading ($h2-size);
+    
+    @include mq(medium) {
+        font-size: $h3-size;
+    }
+    @include mq(small) {
+        font-size: $h4-size;
+    }
+}
+
+h3 {
+    @include heading ($h3-size);
+    
+    @include mq(medium) {
+        font-size: $h4-size;
+    }
+    @include mq(small) {
+        font-size: $h5-size;
+    }
+}
+
+h4 {
+    @include heading ($h4-size);
+    
+    @include mq(medium) {
+        font-size: $h5-size;
+    }
+    @include mq(small) {
+        font-size: $h6-size;
+    }
+}
+
+.container {
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p, input, select, button, ul, li {
+    font-size: $h4-size;
+    
+    @include mq(medium) {
+        font-size: $h5-size;
+    }
+    @include mq(small) {
+        font-size: $h6-size;
+    }
+}
+
+.main {
+    padding-bottom: 5rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
